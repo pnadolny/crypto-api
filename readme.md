@@ -3,4 +3,4 @@
 
 TODO
 
-![Alt text](https://github.com/pnadolny/crypto-api/sample.png?raw=true "Sample")
+![Alt text](https://github.com/pnadolny/crypto-api/blob/master/sample.png?raw=true "Sample")
