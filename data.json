@@ -1,42 +1,42 @@
 {
     "btc": {
-        "balance": 0.00765496,
+        "satoshi": 0.00765496,
         "cost": 486.38
     },
     "eth": {
-        "balance": 0.04251751,
+        "satoshi": 0.04251751,
         "cost": 192.04
     },
     "xlm": {
-        "balance": 24.3743468,
+        "satoshi": 24.3743468,
         "cost": 10.00
     },
     "comp": {
-        "balance": 0.02615877,
+        "satoshi": 0.02615877,
         "cost": 9.00
     },
     "grt": {
-        "balance": 3.79813231,
+        "satoshi": 3.79813231,
         "cost": 4.00
     },
     "amp": {
-        "balance": 63.38921415,
+        "satoshi": 63.38921415,
         "cost": 3.00
     },
     "fet": {
-        "balance": 3.89560012,
+        "satoshi": 3.89560012,
         "cost": 3.00
     },
     "clv": {
-        "balance": 2.49999999,
+        "satoshi": 2.49999999,
         "cost": 3.00
     },
     "lrc": {
-        "balance": 1.02552411,
+        "satoshi": 1.02552411,
         "cost": 1.5
     },
     "auction": {
-        "balance": 0.07174328,
+        "satoshi": 0.07174328,
         "cost": 3.00
     }
 }
