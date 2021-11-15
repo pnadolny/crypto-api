@@ -59,7 +59,7 @@ try:
   print()
   print("Timestamp:"+response_data.get("status").get("timestamp"))
   pt = PrettyTable()
-  pt.field_names = ["Coin", "Name","Price", "1h","24h", "7d","Vol24h","Cost", "Balance", "G/L","%"]
+  pt.field_names = ["Coin", "Name","Price", "1h","24h", "7d","30d","Vol24h","Cost", "Balance", "G/L","%"]
   total_cost, total_balance = 0,0
   for _, (symbol, coin) in enumerate(response_data.get("data").items()):
         quote = coin.get("quote").get("USD")
@@ -75,6 +75,7 @@ try:
         colorMe(quote["percent_change_1h"]),
         colorMe(quote["percent_change_24h"]),
         colorMe(quote["percent_change_7d"]),
+        colorMe(quote["percent_change_30d"]),
         colorMe(quote["volume_change_24h"]),
         formatCurrency(round(cost,2)),
         formatCurrency(round(balance,2)),
