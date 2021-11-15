@@ -1,7 +1,6 @@
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 from prettytable import PrettyTable
-from marshmallow import Schema, fields
 from decimal import Decimal
 import json
 
