@@ -31,7 +31,7 @@ B = "\033[0;34;40m"  # Blue
 N = "\033[0m"  # Reset
 
 
-def colorMe(value):
+def color_me(value):
     if value > 0:
         colored_value = G + str(round(value, 2)) + N
     else:
@@ -63,7 +63,7 @@ try:
         "%",
     ]
     total_cost, total_balance = 0, 0
-    formatCurrency = lambda s: "${:,.2f}".format(s)
+    currency = lambda s: "${:,.2f}".format(s)
     for _, (symbol, coin) in enumerate(response_data.get("data").items()):
         quote = coin.get("quote").get("USD")
         balance = Decimal(quote.get("price")) * Decimal(
@@ -79,16 +79,16 @@ try:
             [
                 B + symbol + N,
                 coin.get("name"),
-                formatCurrency(round(quote.get("price"), 2)),
-                colorMe(quote["percent_change_1h"]),
-                colorMe(quote["percent_change_24h"]),
-                colorMe(quote["percent_change_7d"]),
-                colorMe(quote["percent_change_30d"]),
-                colorMe(quote["volume_change_24h"]),
-                formatCurrency(round(cost, 2)),
-                formatCurrency(round(balance, 2)),
-                colorMe(gain_loss),
-                colorMe(perc),
+                currency(round(quote.get("price"), 2)),
+                color_me(quote["percent_change_1h"]),
+                color_me(quote["percent_change_24h"]),
+                color_me(quote["percent_change_7d"]),
+                color_me(quote["percent_change_30d"]),
+                color_me(quote["volume_change_24h"]),
+                currency(round(cost, 2)),
+                currency(round(balance, 2)),
+                color_me(gain_loss),
+                color_me(perc),
             ]
         )
     pt.align = "r"
@@ -99,10 +99,10 @@ try:
     totalTable.align = "r"
     totalTable.add_row(
         [
-            formatCurrency(round(total_balance, 2)),
-            formatCurrency(round(total_cost, 2)),
-            colorMe(total_balance - total_cost),
-            colorMe(gain_loss_percentage),
+            currency(round(total_balance, 2)),
+            currency(round(total_cost, 2)),
+            color_me(total_balance - total_cost),
+            color_me(gain_loss_percentage),
         ]
     )
     print(totalTable)
