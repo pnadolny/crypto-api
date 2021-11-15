@@ -11,12 +11,7 @@ f.close()
 
 url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 
-symbols = ""
-for key in data:
-    symbols += str(key).upper() + ","
-symbols = symbols.rstrip(",")
-
-parameters = {"symbol": symbols}
+parameters = {"symbol": ",".join(data.keys())}
 
 
 f = open("config.json","r")
