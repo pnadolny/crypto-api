@@ -6,21 +6,21 @@ from decimal import Decimal
 import json
 
 
-f = open("data.json")
+f = open("data.json","r")
 data = json.load(f)
 f.close()
 
 url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 
 symbols = ""
-for i in data:
-    symbols += str(i).upper() + ","
+for key in data:
+    symbols += str(key).upper() + ","
 symbols = symbols.rstrip(",")
 
 parameters = {"symbol": symbols}
 
 
-f = open("config.json")
+f = open("config.json","r")
 config_data = json.load(f)
 f.close()
 
