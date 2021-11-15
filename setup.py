@@ -5,10 +5,5 @@ setup(
     name="crypto",
     version="0.1.0",
     packages=find_packages(),
-    install_requires=[
-        "requests",
-        "prettytable"
-        "colorama",
-        "marshmallow"
-    ],
+    install_requires=["requests", "prettytable" "colorama", "marshmallow"],
 )
